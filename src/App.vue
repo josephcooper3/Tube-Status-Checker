@@ -1,17 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Tube Line Status Checker</h1>
+    <footer>Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights 2019</footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+const Key = require('../key')
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      statusDetails: [],
+    }
+  },
+  mounted() {
+    this.fetchStatusDetails();
+  },
+  // components: {
+
+  // },
+  methods: {
+    fetchStatusDetails() {
+      fetch(`https://api.tfl.gov.uk/Line/Mode/tube/Status?detail=true&app_id=${Key.app_id}&app_key=${Key.app_key}`)
+      .then(result => result.json())
+      .then(statusDetails => this.statusDetails = statusDetails)
+      .catch(console.error);      
+    } 
   }
 }
 </script>
