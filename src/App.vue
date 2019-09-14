@@ -1,12 +1,15 @@
 <template>
   <div id="app">
     <h1>Tube Line Status Checker</h1>
+    <status-list :status-details="statusDetails"></status-list>
     <footer>Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights 2019</footer>
   </div>
 </template>
 
 <script>
 const Key = require('../key')
+
+import StatusList from './components/StatusList'
 
 export default {
   name: 'app',
@@ -18,9 +21,9 @@ export default {
   mounted() {
     this.fetchStatusDetails();
   },
-  // components: {
-
-  // },
+  components: {
+    'status-list': StatusList,
+  },
   methods: {
     fetchStatusDetails() {
       fetch(`https://api.tfl.gov.uk/Line/Mode/tube/Status?detail=true&app_id=${Key.app_id}&app_key=${Key.app_key}`)
