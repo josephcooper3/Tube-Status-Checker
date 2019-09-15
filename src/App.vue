@@ -22,6 +22,14 @@ export default {
   mounted() {
     this.fetchStatusDetails();
   },
+  computed: {
+    goodLines: function () {
+      return this.statusDetails.filter((line) => line.lineStatuses[0].statusSeverityDescription === 'Good Service')
+    },
+    badLines: function () {
+      return this.statusDetails.filter((line) => line.lineStatuses[0].statusSeverityDescription !== 'Good Service')
+    }
+  },
   components: {
     'status-list': StatusList,
   },
