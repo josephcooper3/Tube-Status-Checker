@@ -3,7 +3,7 @@
   <table width="100%">
     <thead>
       <tr>
-        <th>Line</th>
+        <th width="30%">Line</th>
         <th>Service Status (click to see details)</th>
       </tr>
     </thead>
