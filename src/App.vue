@@ -7,8 +7,9 @@
       <option value="good-lines">Show Only Lines with Good Service</option>
       <option value="bad-lines">Show Only Disrupted Lines</option>
     </select>
-    <status-list :lines="filteredLines"></status-list>
+    <br>
     <button v-on:click="fetchStatusDetails()">Refresh Status</button>
+    <status-list :lines="filteredLines"></status-list>
     <footer>Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights 2019</footer>
   </div>
 </template>
@@ -62,5 +63,13 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+footer {
+  font-size: 12px;
+}
+
+button {
+  margin-top: 10px
 }
 </style>
