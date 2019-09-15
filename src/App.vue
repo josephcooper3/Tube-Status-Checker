@@ -2,6 +2,7 @@
   <div id="app">
     <h1>Tube Line Status Checker</h1>
     <status-list :lines="statusDetails"></status-list>
+    <button v-on:click="fetchStatusDetails()">Refresh Status</button>
     <footer>Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights 2019</footer>
   </div>
 </template>
