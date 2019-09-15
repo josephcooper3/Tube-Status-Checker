@@ -1,8 +1,9 @@
 <template>
 <div>
   <h3>Status Details</h3>
- 
-  <line-details v-for="(line, index) in lines" v-bind:line="line" v-bind:key="index"></line-details>
+  <ul>
+    <line-details v-for="line in lines" v-bind:line="line" v-bind:key="line.id"></line-details>
+  </ul>
 </div>
 </template>
 

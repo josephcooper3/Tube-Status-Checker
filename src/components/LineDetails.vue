@@ -1,5 +1,5 @@
 <template>
-  <p>{{ line.id }}</p>
+  <li>{{ line.name }} Line: {{ line.lineStatuses[0].statusSeverityDescription }}</li>
 </template>
 
 <script>
