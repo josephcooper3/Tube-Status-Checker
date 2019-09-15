@@ -1,7 +1,15 @@
 <template>
 <div>
   <table width="100%">
-    <line-details v-for="line in lines" v-bind:line="line" v-bind:key="line.id"></line-details>
+    <thead>
+      <tr>
+        <th>Line</th>
+        <th>Service Status (click to see details)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <line-details v-for="line in lines" v-bind:line="line" v-bind:key="line.id"></line-details>
+    </tbody>
   </table>
 </div>
 </template>
