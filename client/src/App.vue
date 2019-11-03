@@ -15,7 +15,6 @@
 </template>
 
 <script>
-const Key = require('../key')
 
 import StatusList from './components/StatusList'
 
@@ -46,10 +45,10 @@ export default {
   },
   methods: {
     fetchStatusDetails() {
-      fetch(`https://api.tfl.gov.uk/Line/Mode/tube/Status?detail=true&app_id=${Key.app_id}&app_key=${Key.app_key}`)
-      .then(result => result.json())
-      .then(statusDetails => this.statusDetails = statusDetails)
-      .catch(console.error);      
+      // fetch()
+      // .then(result => result.json())
+      // .then(statusDetails => this.statusDetails = statusDetails)
+      // .catch(console.error);      
     },
   }
 }
