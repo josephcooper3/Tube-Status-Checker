@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "core-js": "^2.6.10",
+    "express": "^4.17.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
