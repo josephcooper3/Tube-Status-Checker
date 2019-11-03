@@ -19,6 +19,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
+    "cors": "^2.8.5",
     "nodemon": "^1.19.4",
     "vue-template-compiler": "^2.6.10"
   }

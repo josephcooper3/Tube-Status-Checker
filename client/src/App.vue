@@ -45,10 +45,10 @@ export default {
   },
   methods: {
     fetchStatusDetails() {
-      // fetch()
-      // .then(result => result.json())
-      // .then(statusDetails => this.statusDetails = statusDetails)
-      // .catch(console.error);      
+      fetch(`http://localhost:3000/`)
+      .then(result => result.json())
+      .then(statusDetails => this.statusDetails = statusDetails)
+      .catch(console.error);      
     },
   }
 }
