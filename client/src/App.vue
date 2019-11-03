@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     fetchStatusDetails() {
-      fetch(`http://localhost:3000/api`)
+      fetch(`/api`)
       .then(result => result.json())
       .then(statusDetails => this.statusDetails = statusDetails)
       .catch(console.error);      

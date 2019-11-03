@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run build"
   },
+  "proxy": "http://localhost:3000/",
   "dependencies": {
     "core-js": "^2.6.10",
     "dotenv": "^8.2.0",
