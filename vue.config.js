@@ -1,7 +1,8 @@
 module.exports = {
   configureWebpack: {
     entry: {
-      app: './client/src/main.js'
+      client: './client/src/main.js',
+      server: './server/server.js'
     }
   }
 }
