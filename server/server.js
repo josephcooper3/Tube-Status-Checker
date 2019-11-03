@@ -10,6 +10,11 @@ dotenv.config();
 const appId = process.env.APP_ID;
 const appKey = process.env.APP_KEY;
 
+const serveStatic = require('serve-static');
+const path = require('path');
+app.use(serveStatic(path.join(__dirname, 'dist')));
+const port = process.env.PORT || 3000;
+
 app.get('/', async function (req, res) {
   fetch(`https://api.tfl.gov.uk/Line/Mode/tube/Status?detail=true&app_id=${ appId }&app_key=${ appKey }`)
   .then(result => result.json())
@@ -17,6 +22,6 @@ app.get('/', async function (req, res) {
   .catch(console.error);      
 });
 
-app.listen(3000, function () {
-  console.log(`App running on port 3000`);
+app.listen(port, function () {
+  console.log(`App running on port ${ port }`);
 });
