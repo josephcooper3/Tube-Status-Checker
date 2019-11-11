@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     fetchStatusDetails() {
-      fetch(`/api`)
+      fetch('tflLineStatus')
       .then(result => result.json())
       .then(statusDetails => this.statusDetails = statusDetails)
       .catch(console.error);      
